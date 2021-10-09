@@ -3,7 +3,7 @@ import { QUERY_GET_ROCKETS } from "../../store/queries";
 import Alert from "@kiwicom/orbit-components/lib/Alert";
 import { RocketItem } from "../../components/RocketItem";
 import Loading from "@kiwicom/orbit-components/lib/Loading";
-import Heading from "@kiwicom/orbit-components/lib/Heading";
+import { View } from "../../../../common/styles/components";
 
 export function RocketsList() {
   const { loading, data, error } = useQuery<any, any>(QUERY_GET_ROCKETS);
@@ -13,10 +13,9 @@ export function RocketsList() {
   };
 
   return (
-    <section>
-      <Heading>Rockets</Heading>
+    <View>
       {loading ? <Loading /> : data && renderRocketItems(data.rockets)}
       {error && <Alert type="critical">Please refresh the page</Alert>}
-    </section>
+    </View>
   );
 }
