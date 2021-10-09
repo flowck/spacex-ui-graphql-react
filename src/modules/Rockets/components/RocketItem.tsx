@@ -9,7 +9,7 @@ interface Props extends BaseProps {
 export function RocketItem({ data }: Props) {
   const { name, description } = data;
   return (
-    <Card>
+    <Card spaceAfter="small">
       <CardSection title={name} description={description}></CardSection>
     </Card>
   );
