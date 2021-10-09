@@ -30,22 +30,22 @@ jobs:
       #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
-      # - name: Release
-      #   if: github.ref == 'refs/heads/main'
-      #   env:
-      #     GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      #   run: npx semantic-release --debug
+      - name: Release
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: npx semantic-release --debug
 
-      # - name: Trigger deployment to production
-      #   if: github.ref == 'refs/heads/main'
-      #   uses: mvasigh/dispatch-action@main
-      #   with:
-      #     token: ${{ secrets.GH_TOKEN }}
-      #     event_type: deploy-to-prod
+      - name: Trigger deployment to production
+        if: github.ref == 'refs/heads/main'
+        uses: mvasigh/dispatch-action@main
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          event_type: deploy-to-prod
 
-      # - name: Trigger Deployment to Staging
-      #   if: github.ref == 'refs/heads/develop'
-      #   uses: mvasigh/dispatch-action@main
-      #   with:
-      #     token: ${{ secrets.GH_TOKEN }}
-      #     event_type: deploy-to-staging
+      - name: Trigger Deployment to Staging
+        if: github.ref == 'refs/heads/develop'
+        uses: mvasigh/dispatch-action@main
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          event_type: deploy-to-staging
