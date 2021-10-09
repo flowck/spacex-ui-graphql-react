@@ -1,5 +1,7 @@
+import "../../common/styles/index.css";
 import { customTokens } from "../../common/styles/Theme";
 import Heading from "@kiwicom/orbit-components/lib/Heading";
+import { Header } from "../../common/components/Header/Header";
 import ThemeProvider from "@kiwicom/orbit-components/lib/ThemeProvider";
 import Layout, { LayoutColumn } from "@kiwicom/orbit-components/lib/Layout";
 import { Route, Switch, Redirect, BrowserRouter as Router } from "react-router-dom";
@@ -9,9 +11,9 @@ function App() {
   return (
     <ThemeProvider theme={{ orbit: customTokens }}>
       <main>
-        <Heading>Spacex UI</Heading>
-
         <Router>
+          <Header></Header>
+
           <Layout type="MMB">
             <LayoutColumn>
               <Switch>
@@ -19,6 +21,7 @@ function App() {
                   <Redirect to="/rockets"></Redirect>
                 </Route>
                 <Route path="/rockets">
+                  <Heading type="title2">Rockets</Heading>
                   <RocketsList></RocketsList>
                 </Route>
               </Switch>
