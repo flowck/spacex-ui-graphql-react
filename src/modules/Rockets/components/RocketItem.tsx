@@ -1,4 +1,5 @@
 import { Rocket } from "../store/interfaces";
+import { Link } from "react-router-dom";
 import { BaseProps } from "../../../common/interfaces/index";
 import Card, { CardSection } from "@kiwicom/orbit-components/lib/Card";
 
@@ -7,10 +8,12 @@ interface Props extends BaseProps {
 }
 
 export function RocketItem({ data }: Props) {
-  const { name, description } = data;
+  const { name, description, id } = data;
   return (
-    <Card spaceAfter="small">
-      <CardSection title={name} description={description}></CardSection>
-    </Card>
+    <Link to={`/rockets/${id}`} style={{ textDecoration: "none" }}>
+      <Card spaceAfter="small">
+        <CardSection title={name} description={description} />
+      </Card>
+    </Link>
   );
 }
