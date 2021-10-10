@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-light-gray: #fafafa;
+  --color-white: #ffffff;
+}
+
+body {
+  background-color: var(--color-light-gray);
+}
