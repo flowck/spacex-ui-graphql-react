@@ -15,18 +15,18 @@ export function Table({ rows, columns }: Props) {
       // Render boolens as <Tag />
       if (row && isTag) {
         return (
-          <TableCell>
+          <TableCell key={name}>
             <Tag> {row[name] ? "Succeeded" : "Failed"} </Tag>{" "}
           </TableCell>
         );
       }
 
-      return <TableCell>{row ? row[name] : label || name}</TableCell>;
+      return <TableCell key={name}>{row ? row[name] : label || name}</TableCell>;
     });
   };
 
   const renderRows = () => {
-    return rows.map((row) => <TableRow>{renderColumns(row as Row)}</TableRow>);
+    return rows.map((row, index) => <TableRow key={index}>{renderColumns(row as Row)}</TableRow>);
   };
 
   return (
