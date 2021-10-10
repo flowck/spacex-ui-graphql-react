@@ -6,6 +6,7 @@ import ThemeProvider from "@kiwicom/orbit-components/lib/ThemeProvider";
 import Layout, { LayoutColumn } from "@kiwicom/orbit-components/lib/Layout";
 import { Route, Switch, Redirect, BrowserRouter as Router } from "react-router-dom";
 import { RocketsList } from "../../modules/Rockets/containers/RocketsList/RocketsList";
+import { RocketDetails } from "../../modules/Rockets/containers/RocketDetails/RocketDetails";
 
 function App() {
   return (
@@ -20,9 +21,14 @@ function App() {
                 <Route exact path="/">
                   <Redirect to="/rockets"></Redirect>
                 </Route>
-                <Route path="/rockets">
-                  <Heading type="title2">Rockets</Heading>
+                <Route exact path="/rockets">
+                  <Heading type="title2" spaceAfter="medium">
+                    Rockets
+                  </Heading>
                   <RocketsList></RocketsList>
+                </Route>
+                <Route path="/rockets/:rocketId">
+                  <RocketDetails></RocketDetails>
                 </Route>
               </Switch>
             </LayoutColumn>
