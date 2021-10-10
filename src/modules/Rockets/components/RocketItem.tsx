@@ -1,4 +1,4 @@
-import { Rocket } from "../store/interfaces";
+import { Rocket } from "../queries/interfaces";
 import { Link } from "react-router-dom";
 import { BaseProps } from "../../../common/interfaces/index";
 import Card, { CardSection } from "@kiwicom/orbit-components/lib/Card";
