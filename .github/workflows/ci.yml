@@ -43,7 +43,7 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
           event_type: deploy-to-prod
 
-      - name: Trigger Deployment to Staging
+      - name: Trigger deployment to Staging
         if: github.ref == 'refs/heads/develop'
         uses: mvasigh/dispatch-action@main
         with:

@@ -26,10 +26,10 @@ export function Header() {
               <NavLink activeClassName="header__nav--active" to="/rockets">
                 <TextLink asComponent="span">Rockets</TextLink>
               </NavLink>
-              {/* <NavLink activeClassName="header__nav--active" to="/rockets">
-                <TextLink asComponent="span">Launches</TextLink>
+              <NavLink activeClassName="header__nav--active" to="/missions">
+                <TextLink asComponent="span">Missions</TextLink>
               </NavLink>
-              <NavLink activeClassName="header__nav--active" to="/rockets">
+              {/* <NavLink activeClassName="header__nav--active" to="/rockets">
                 <TextLink asComponent="span">Rockets</TextLink>
               </NavLink> */}
             </LinkList>
