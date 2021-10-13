@@ -2,6 +2,9 @@
   "name": "spacex-ui-graphql-react",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "url": "https://github.com/flowck/spacex-ui-graphql-react"
+  },
   "dependencies": {
     "@apollo/client": "^3.4.16",
     "@kiwicom/orbit-components": "^1.2.2-rc",
