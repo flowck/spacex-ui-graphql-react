@@ -20,4 +20,5 @@ src/
 - Typescript
 - Apollo GraphQL Client
 - Styled Components
-- Redux
+- Semantic-Release
+- Github Actions
