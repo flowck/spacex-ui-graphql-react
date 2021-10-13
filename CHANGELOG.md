@@ -1,3 +1,14 @@
+# [1.2.0](https://github.com/flowck/spacex-ui-graphql-react/compare/v1.1.0...v1.2.0) (2021-10-13)
+
+
+### Features
+
+* **#2:** add missions link in the header ([d8a7ef9](https://github.com/flowck/spacex-ui-graphql-react/commit/d8a7ef92a758c6fc33bad3ba3001556b0010ab0a)), closes [#2](https://github.com/flowck/spacex-ui-graphql-react/issues/2)
+* **#2:** add support for rows with links ([59395b2](https://github.com/flowck/spacex-ui-graphql-react/commit/59395b2554cbc861e2897bd03a7d107f945f9b00)), closes [#2](https://github.com/flowck/spacex-ui-graphql-react/issues/2)
+* **#2:** setup an error boundary ([efbb7b6](https://github.com/flowck/spacex-ui-graphql-react/commit/efbb7b653efb0921096a0f9d948a2e8e4ee47c82)), closes [#2](https://github.com/flowck/spacex-ui-graphql-react/issues/2)
+* **#2:** show missions ([46e807a](https://github.com/flowck/spacex-ui-graphql-react/commit/46e807aa24f19219da92c99733f083cc8c81342a)), closes [#2](https://github.com/flowck/spacex-ui-graphql-react/issues/2)
+* **#4:** show mission's details ([d885c14](https://github.com/flowck/spacex-ui-graphql-react/commit/d885c14a9875cad1cace5398912531350c9a8140)), closes [#4](https://github.com/flowck/spacex-ui-graphql-react/issues/4)
+
 # [1.1.0](https://github.com/flowck/spacex-ui-graphql-react/compare/v1.0.0...v1.1.0) (2021-10-10)
 
 
