@@ -9,3 +9,16 @@ export const QUERY_GET_MISSIONS = gql`
     }
   }
 `;
+
+export const QUERY_GET_MISSION = gql`
+  query GetMission($missionId: ID!) {
+    mission(id: $missionId) {
+      id
+      name
+      website
+      wikipedia
+      description
+      manufacturers
+    }
+  }
+`;
