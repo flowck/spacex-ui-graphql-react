@@ -12,6 +12,7 @@ import { Route, Switch, Redirect, BrowserRouter as Router } from "react-router-d
 import { RocketsList } from "../../modules/Rockets/containers/RocketsList/RocketsList";
 import { MissionsList } from "../../modules/Missions/containers/MissionsList/MissionsList";
 import { RocketDetails } from "../../modules/Rockets/containers/RocketDetails/RocketDetails";
+import { MissionDetails } from "../../modules/Missions/containers/MissionDetails/MissionDetails";
 
 function App() {
   return (
@@ -37,11 +38,14 @@ function App() {
                     <Route path="/rockets/:rocketId">
                       <RocketDetails></RocketDetails>
                     </Route>
-                    <Route>
+                    <Route exact path="/missions">
                       <Heading type="title2" spaceAfter="medium">
                         Missions
                       </Heading>
                       <MissionsList></MissionsList>
+                    </Route>
+                    <Route path="/missions/:missionId">
+                      <MissionDetails></MissionDetails>
                     </Route>
                   </Switch>
                 </ErrorBoundary>
